@@ -2,10 +2,12 @@ main {
   text-align: center;
 }
 
-.form-popup {
+#form-popup {
   width: 500px;
   margin: 20px auto;
   text-align: left;
+  display: none;
+  z-index: 9;
 }
 
 fieldset {

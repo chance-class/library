@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <script src="./script.js"></script>
     <title>Library</title>
   </head>
   <body>
@@ -11,9 +11,9 @@
       <h1>library</h1>
     </header>
     <main>
-      <button id="add-btn"><h2>+ Add Book</h2></button>
+      <button id="add-btn" onclick="openForm()"><h2>+ Add Book</h2></button>
       <div class="container"></div>
-      <div class="form-popup">
+      <div id="form-popup">
         <form action="#" class="form-container">
           <fieldset>
             <legend>New Book</legend>
