@@ -7,6 +7,30 @@
     <title>Library</title>
   </head>
   <body>
-
+    <header>
+      <h1>library</h1>
+    </header>
+    <main>
+      <button id="add-btn"><h2>+ Add Book</h2></button>
+      <div class="container"></div>
+      <div class="form-popup">
+        <form action="#" class="form-container">
+          <fieldset>
+            <legend>New Book</legend>
+            <input type="text" name="title" id="title" placeholder="Title">
+            <input type="text" name="author" id="author" placeholder="Author">
+            <input type="number" name="pages" id="pages" placeholder="# of Pages">
+            <p>Have you read it?</p>
+            <div>
+              <input type="radio" name="read" id="yes" value="yes">
+              <label for="yes">Yes</label>
+              <input type="radio" name="read" id="no" value="no">
+              <label for="no">No</label>
+            </div>
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
   </body>
 </html>

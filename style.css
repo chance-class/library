@@ -1,0 +1,14 @@
+main {
+  text-align: center;
+}
+
+.form-popup {
+  width: 500px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
