@@ -28,37 +28,39 @@ function addBookToLibrary(title, author, pages, read) {
       for (const item of books) {
         item.remove();
       }
-    myLibrary.forEach(book => {
+    for (const book of myLibrary) {
       let card = document.createElement("div");
       card.classList.add("card");
       container.appendChild(card);
       let cardTitle = document.createElement("p");
-      cardTitle.textContent = `\"${title}\"`;
+      cardTitle.textContent = `\"${book.title}\"`;
       cardTitle.classList.add("title");
       card.appendChild(cardTitle);
       let cardAuthor = document.createElement("p");
-      cardAuthor.textContent = `By ${author}`;
+      cardAuthor.textContent = `By ${book.author}`;
       cardAuthor.classList.add("author")
       card.appendChild(cardAuthor);;
       let cardPages = document.createElement("p");
-      cardPages.textContent = `${pages} pages`;
+      cardPages.textContent = `${book.pages} pages`;
       cardPages.classList.add("pages");
       card.appendChild(cardPages);
       let cardRead = document.createElement("button");
       cardRead.classList.add("read-btn");
-      if (read === "no") {
+      if (book.read === "no") {
         cardRead.textContent = "Not Read";
         cardRead.classList.add("btn-not-read");
-      } else if (read === "yes") {
+      } else if (book.read === "yes") {
         cardRead.textContent = "Read";
         cardRead.classList.add("btn-read");
       } else {
         cardRead.textContent = "Error";
       }
       card.appendChild(cardRead);
-      });
+      };
    
   }
+
+  
   
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
@@ -66,4 +68,4 @@ function addBookToLibrary(title, author, pages, read) {
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
     addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
-    addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
+   // addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
