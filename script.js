@@ -60,7 +60,15 @@ function addBookToLibrary(title, author, pages, read) {
    
   }
 
-  
+  let form = document.querySelector(".form-container");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let title = document.getElementById("title").value;
+    let author = document.getElementById("author").value;
+    let pages = document.getElementById("pages").value;
+    let read = document.getElementById("read").value;
+    addBookToLibrary(title, author, pages, read);
+  });
   
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
