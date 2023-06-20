@@ -19,3 +19,42 @@ function Book(title, author, pages, read) {
   }
 }
 
+const container = document.querySelector(".container");
+
+function addBookToLibrary(title, author, pages, read) {
+    myLibrary.push(new Book(title, author, pages, read));
+    console.log(myLibrary);
+    let card = document.createElement("div");
+    card.classList.add("card");
+    container.appendChild(card);
+    let cardTitle = document.createElement("p");
+    cardTitle.textContent = `\"${title}\"`;
+    cardTitle.classList.add("title");
+    card.appendChild(cardTitle);
+    let cardAuthor = document.createElement("p");
+    cardAuthor.textContent = `By ${author}`;
+    cardAuthor.classList.add("author")
+    card.appendChild(cardAuthor);;
+    let cardPages = document.createElement("p");
+    cardPages.textContent = `${pages} pages`;
+    cardPages.classList.add("pages");
+    card.appendChild(cardPages);
+    let cardRead = document.createElement("button");
+    cardRead.classList.add("read-btn");
+    if (read === "no") {
+      cardRead.textContent = "Not Read";
+      cardRead.classList.add("btn-not-read");
+    } else {
+      cardRead.textContent = "Read";
+      cardRead.classList.add("btn-read");
+    }
+    card.appendChild(cardRead);
+  }
+  
+    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");
+    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
+    addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
+    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
+    addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
+    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
+    addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
