@@ -66,7 +66,7 @@ function addBookToLibrary(title, author, pages, read) {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
-    let read = document.getElementById("read").value;
+    let read = document.querySelector('input[name="read"]:checked').value;
     addBookToLibrary(title, author, pages, read);
   });
   
