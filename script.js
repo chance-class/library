@@ -75,9 +75,8 @@ function addBookToLibrary(title, author, pages, read) {
     } else {
     addBookToLibrary(title, author, pages, read);
     document.getElementById("form-popup").style.display = "none";
-    title = "";
-    author = "";
-    pages = "";
+    let allInputs = document.querySelectorAll('input');
+    allInputs.forEach(singleInput => singleInput.value = '');
     }
   });
   
