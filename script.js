@@ -56,11 +56,13 @@ function addBookToLibrary(title, author, pages, read) {
         cardRead.textContent = "Error";
       }
       card.appendChild(cardRead);
+      let removeBtn = document.createElement("button");
+      removeBtn.classList.add("remove-btn");
+      removeBtn.textContent = "Remove";
+      card.appendChild(removeBtn);
       };
    
   }
-
-  
 
   let form = document.querySelector(".form-container");
   form.addEventListener("submit", (e) => {
@@ -79,7 +81,8 @@ function addBookToLibrary(title, author, pages, read) {
     allInputs.forEach(singleInput => singleInput.value = '');
     }
   });
-  
+
+
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");
     addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
     addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
