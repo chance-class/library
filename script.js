@@ -60,19 +60,24 @@ function addBookToLibrary(title, author, pages, read) {
    
   }
 
-  let title = document.getElementById("title").value;
-    let author = document.getElementById("author").value;
-    let pages = document.getElementById("pages").value;
-    let read = document.querySelector('input[name="read"]:checked').value;
+  
 
   let form = document.querySelector(".form-container");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    let title = document.getElementById("title").value;
+    let author = document.getElementById("author").value;
+    let pages = document.getElementById("pages").value;
+    let read = document.querySelector('input[name="read"]:checked').value;
     if (title === "" || author === "" || pages === "") {
       alert("Please fill out all fields.");
       return;
     } else {
     addBookToLibrary(title, author, pages, read);
+    document.getElementById("form-popup").style.display = "none";
+    title = "";
+    author = "";
+    pages = "";
     }
   });
   
