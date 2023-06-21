@@ -55,6 +55,17 @@ function addBookToLibrary(title, author, pages, read) {
       } else {
         cardRead.textContent = "Error";
       }
+      cardRead.addEventListener("click", () => {
+        if (cardRead.textContent === "Read") {
+          cardRead.textContent = "Not Read";
+          cardRead.classList.remove("btn-read");
+          cardRead.classList.add("btn-not-read");
+        } else {
+          cardRead.textContent = "Read";
+          cardRead.classList.remove("btn-not-read");
+          cardRead.classList.add("btn-read")
+        }
+      });
       card.appendChild(cardRead);
       let removeBtn = document.createElement("button");
       removeBtn.classList.add("remove-btn");
