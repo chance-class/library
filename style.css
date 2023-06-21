@@ -1,3 +1,7 @@
+body {
+  background-color: #f1f5f9;
+}
+
 main {
   text-align: center;
   position: relative;
@@ -20,9 +24,10 @@ fieldset {
 }
 
 .card {
-  border: 3px solid black;
+  border: 1px solid #94a3b8;
   width: 300px;
   display: grid;
+  background-color: #f8fafc;
 }
 
 .container {
@@ -30,4 +35,21 @@ fieldset {
   flex-wrap: wrap;
   gap: 25px;
   z-index: 1;
+}
+
+#add-btn {
+  background-color: #f1f5f9;
+  border: none;
+}
+
+#add-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-read {
+  background-color: #c4b5fd;
+}
+
+.btn-not-read {
+  background-color: #fda4af;
 }
