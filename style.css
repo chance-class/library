@@ -42,6 +42,7 @@ fieldset {
   border-radius: 5px;
   width: 300px;
   display: grid;
+  justify-content: center;
   background-color: #f8fafc;
 }
 
@@ -62,6 +63,14 @@ fieldset {
 
 #add-btn:hover {
   background-color: #e2e8f0;
+}
+
+.btn-read, 
+.btn-not-read, 
+.remove-btn {
+  width: 250px;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
 .btn-read {
