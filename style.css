@@ -25,6 +25,7 @@ fieldset {
 
 .card {
   border: 1px solid #94a3b8;
+  border-radius: 5px;
   width: 300px;
   display: grid;
   background-color: #f8fafc;
@@ -35,11 +36,14 @@ fieldset {
   flex-wrap: wrap;
   gap: 25px;
   z-index: 1;
+  padding: 20px;
 }
 
 #add-btn {
   background-color: #f1f5f9;
   border: none;
+  border-radius: 7px;
+  margin: 20px;
 }
 
 #add-btn:hover {
