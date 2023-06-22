@@ -28,7 +28,6 @@ const container = document.querySelector(".container");
 
 function addBookToLibrary(title, author, pages, read) {
     myLibrary.push(new Book(title, author, pages, read));
-    console.log(myLibrary);
     let books = document.querySelectorAll('.card');
       for (const item of books) {
         item.remove();
@@ -104,12 +103,3 @@ function addBookToLibrary(title, author, pages, read) {
     allInputs.forEach(singleInput => singleInput.value = '');
     }
   });
-
-
-    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");
-    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
-    addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
-    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
-    addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
-    addBookToLibrary("Hitchhiker's Guide to the Galaxy", "Douglas Adams", "42", "no");    
-   // addBookToLibrary("Harry Potter", "J.K. Rowling", "350", "yes");
