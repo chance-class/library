@@ -5,6 +5,11 @@
 
 function openForm() {
   document.getElementById("form-popup").style.display = "block";
+  document.addEventListener("click", (e) => {
+      if (e.target.closest(".container") || e.target.closest(".head-ctr")) {
+        document.getElementById("form-popup").style.display = "none";
+      }
+  });
 }
 
 let myLibrary = [];
