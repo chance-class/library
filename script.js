@@ -98,7 +98,6 @@ function addBookToLibrary(title, author, pages, read) {
       return;
     } else {
     addBookToLibrary(title, author, pages, read);
-    console.log(read);
     document.getElementById("form-popup").style.display = "none";
     let allInputs = document.querySelectorAll('.input');
     allInputs.forEach(singleInput => singleInput.value = '');
