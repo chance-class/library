@@ -86,7 +86,7 @@ input[type="number"] {
 }
 
 .card {
-  border: 1px solid #94a3b8;
+  box-shadow: 0 0 3px #94a3b8;
   border-radius: 5px;
   width: 300px;
   display: flex;
