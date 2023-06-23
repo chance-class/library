@@ -6,7 +6,7 @@
 function openForm() {
   document.getElementById("form-popup").style.display = "block";
   document.addEventListener("click", (e) => {
-      if (e.target.closest(".container") || e.target.closest(".head-ctr")) {
+      if ( !(document.getElementById("add-btn").contains(e.target))) {
         document.getElementById("form-popup").style.display = "none";
       }
   });
