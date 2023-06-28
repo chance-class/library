@@ -80,7 +80,7 @@ input[type="number"] {
   height: 40px;
   font-size: 22px;
   border: none;
-  background-color: #7dd3fc;
+  background-color: #f8fafc;
   border-radius: 7px;
   margin-top: 10px;
 }
@@ -108,7 +108,6 @@ input[type="number"] {
   gap: 25px;
   z-index: 1;
   padding: 20px;
-  background-color: #f1f5f9;
 }
 
 #add-btn {
@@ -150,9 +149,9 @@ input[type="number"] {
 }
 
 .btn-read {
-  background-color: #86efac;
+  background-color: #6ec6e0;
 } 
 
 .btn-not-read {
-  background-color: #fda4af;
+  background-color: #f36542;
 }
