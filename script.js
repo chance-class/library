@@ -77,14 +77,15 @@ function addBookToLibrary(title, author, pages, read) {
       card.appendChild(removeBtn);
       removeBtn.addEventListener("click", (e) => {
         e.target.parentNode.remove();
-        let location = myLibrary.indexOf(book);
-        myLibrary.splice(`${location}`, 1);
+        book.remove();
       });
     };
    
   }
-  
-  
+
+  Book.prototype.remove = function() {
+    myLibrary.splice(this, 1);
+  }
 
   let form = document.querySelector(".form-container");
   form.addEventListener("submit", (e) => {
