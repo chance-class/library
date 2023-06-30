@@ -2,6 +2,12 @@
   font-family: "Geologica", sans-serif;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 body {
   background-color: #f1f5f9;
 }
@@ -155,3 +161,4 @@ input[type="number"] {
 .btn-not-read {
   background-color: #f36542;
 }
+
