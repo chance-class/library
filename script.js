@@ -14,15 +14,30 @@ function openForm() {
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
+class Book {
+  constructor (title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.info = function() {
+  }
+  info = () => {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}.`;
   }
+  remove = () => {
+    myLibrary.splice(this, 1);
+  }
 }
+
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+//   this.info = function() {
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}.`;
+//   }
+// }
 
 const container = document.querySelector(".container");
 
@@ -83,9 +98,9 @@ function addBookToLibrary(title, author, pages, read) {
    
   }
 
-  Book.prototype.remove = function() {
-    myLibrary.splice(this, 1);
-  }
+  // Book.prototype.remove = function() {
+  //   myLibrary.splice(this, 1);
+  // }
 
   let form = document.querySelector(".form-container");
   form.addEventListener("submit", (e) => {
