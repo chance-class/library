@@ -100,10 +100,6 @@ function addBookToLibrary(title, author, pages, read) {
    
   }
 
-  // Book.prototype.remove = function() {
-  //   myLibrary.splice(this, 1);
-  // }
-
   let form = document.querySelector(".form-container");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
