@@ -24,9 +24,6 @@ class Book {
   info = () => {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}.`;
   }
-  remove = () => {
-    myLibrary.splice(this, 1);
-  }
 }
 
 // function Book(title, author, pages, read) {
@@ -92,7 +89,12 @@ function addBookToLibrary(title, author, pages, read) {
       card.appendChild(removeBtn);
       removeBtn.addEventListener("click", (e) => {
         e.target.parentNode.remove();
-        book.remove();
+        console.log(book);
+        for (let i = 0; i < myLibrary.length; i++) {
+          if (myLibrary[i].title === book.title) {
+              myLibrary.splice(i,1);
+          }
+        }      
       });
     };
    
